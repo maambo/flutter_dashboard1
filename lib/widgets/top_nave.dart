@@ -29,7 +29,7 @@ AppBar topNavigationBar(BuildContext context, GlobalKey<ScaffoldState> key) =>
         Visibility(
             child: CustomText(
                 text: "Dashboard 1",
-                color: lightGrey,
+                color: dark,
                 size: 20,
                 weight: FontWeight.bold)),
         Expanded(child: Container()),
