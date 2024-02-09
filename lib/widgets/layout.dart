@@ -3,14 +3,15 @@ import 'package:flutter_web_dashboard1/helpers/responsivness.dart';
 import 'package:flutter_web_dashboard1/widgets/Large_screen.dart';
 import 'package:flutter_web_dashboard1/widgets/medium_screen.dart';
 import 'package:flutter_web_dashboard1/widgets/small_screen.dart';
+import 'package:flutter_web_dashboard1/widgets/top_nave.dart';
 
 class SiteLayout extends StatelessWidget {
-  const SiteLayout({super.key});
-
+  final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(elevation: 0, backgroundColor: Colors.white),
+        appBar: topNavigationBar(context, scaffoldKey),
+        drawer: Drawer(),
         body: ResponsiveWidget(
           largeScreen: LargeScreen(),
           smallScreen: const SmallScreen(),
