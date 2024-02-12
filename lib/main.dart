@@ -6,6 +6,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'pages/home.dart';
 
 void main() {
+  Get.put(MenuController());
   runApp(const MyApp());
 }
 
